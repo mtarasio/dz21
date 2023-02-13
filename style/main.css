@@ -1,0 +1,42 @@
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 550px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: none;
+  background: none;
+}
+
+.card-side {
+  height: 550px;
+  border-radius: 20px;
+  transition: all 0.8s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+}
+
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-image: url("../img/ace_of_clubs.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-side.front {
+  background-image: url("../img/front.jpg");
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}/*# sourceMappingURL=main.css.map */
